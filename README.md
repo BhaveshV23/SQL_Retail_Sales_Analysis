@@ -10,23 +10,24 @@ By leveraging SQL queries, the project uncovers valuable patterns that can suppo
 
 ## Objectives
 
-1. Perform data cleaning to ensure accuracy and consistency.
-2. Explore sales data to understand volume, categories, and customer demographics.
-3. Solve business-related questions using SQL (e.g., sales trends, customer loyalty, peak hours).
-4. Apply advanced SQL techniques like window functions, CTEs, ranking, and aggregation.
-5. Provide data-driven insights that help in decision-making for a retail business.
+- Clean and validate retail sales data using SQL
+- Perform exploratory analysis to understand sales, customers, and categories
+- Solve real-world business problems using SQL queries
+- Apply advanced SQL concepts (CTEs, window functions, ranking)
+- Generate actionable insights for sales growth and operational efficiency
+
 
 ## Project Structure
 
-1. Database Setup
+### Database Setup
 
-• Data Creation: The project starts by creating a database named sql_project1.
+**Data Creation**: The project starts by creating a database named sql_project1.
 
 ```SQL
 CREATE DATABASE sql_project1;
 ```
 
-• Table Creation: A table named retail_sales is created to store the sales data. The structure includes:
+**Table Creation**: A table named retail_sales is created to store the sales data. The structure includes:
   - Transaction details (transaction ID, sale date, sale time)
   - Customer demographics (customer ID, gender, age)
   - Product information (category, quantity sold, price per unit)
@@ -56,8 +57,8 @@ LIMIT 10;
 
 SELECT COUNT(*) FROM retail_sales;
 ```
-
-2. Data Cleaning
+---
+### Data Cleaning
 
 • Ensures the dataset is accurate and consistent before analysis.
 
@@ -113,8 +114,8 @@ Validate calculation: total_sale = quantity * price_per_unit
 SELECT * FROM retail_sales
 WHERE total_sale != quantity * price_per_unit;
 ```
-
-3. Data Exploration
+---
+### Data Exploration
 
 • Get a high-level understanding of the dataset.
 
@@ -132,8 +133,8 @@ How many categories do we have?
 ```SQL
 SELECT COUNT(DISTINCT category) AS total_categories FROM retail_sales;
 ```
-
-4. Data Analysis & Insights
+---
+### Data Analysis & Insights
 
 • Data Analysis & Business Key Problems & Answers
 
@@ -231,7 +232,8 @@ FROM hourly_sale
 GROUP BY shift;
 ```
 
-## Customer Analysis
+**Customer Analysis**
+
 11. Find the top category each gender buys the most.
 
 ```SQL
@@ -265,7 +267,8 @@ FROM retail_sales
 GROUP BY category;
 ```
 
-## Sales & Revenue Insights
+**Sales & Revenue Insights**
+
 14. Find month-over-month sales growth.
 
 ```SQL
@@ -302,7 +305,8 @@ GROUP BY weekday
 ORDER BY total_orders DESC;
 ```
 
-## Operational Analysis
+**Operational Analysis**
+
 17. Find the peak shopping hour of the day.
 
 ```SQL
@@ -353,47 +357,47 @@ ORDER BY customer_id, category_sales DESC;
 
 ## Findings
 
-• Data Quality:
+**Data Quality:**
 - Some transactions had missing or inconsistent values, which were removed during the cleaning process.
 - A few records had mismatched total_sale != quantity * price_per_unit, indicating errors in raw data entry.
 
-• Sales Insights:
+**Sales Insights:**
 - Clothing and Electronics generated the highest total sales.
 - Certain months (e.g., festive seasons) consistently showed peak sales volumes.
 - Revenue share was not evenly distributed—one or two categories dominated.
 
-• Customer Behavior:
+**Customer Behavior:**
 - A small group of customers contributed disproportionately to total revenue (high-value customers).
 - Repeat customers (more than 5 purchases) formed a loyal base.
 - Gender-based analysis showed distinct category preferences.
 
-• Operational Patterns:
+**Operational Patterns:**
 - Peak shopping hours were in the afternoon and evening.
 - Weekends recorded higher transaction volumes compared to weekdays.
 
 ## Reports
 
-• Sales Reports:
--Total sales by category, month, and year.
--Month-over-month sales growth.
--Revenue contribution of each category.
+**Sales Reports:**
+- Total sales by category, month, and year.
+- Month-over-month sales growth.
+- Revenue contribution of each category.
 
-• Customer Reports:
--Top 5 customers by sales.
--Loyal customers (repeat buyers).
--Average purchase value per customer.
--Favorite categories by gender.
+**Customer Reports:**
+- Top 5 customers by sales.
+- Loyal customers (repeat buyers).
+- Average purchase value per customer.
+- Favorite categories by gender.
 
-• Operational Reports:
--Peak shopping hours and busiest days.
--Shift-wise sales distribution (Morning, Afternoon, Evening).
+**Operational Reports:**
+- Peak shopping hours and busiest days.
+- Shift-wise sales distribution (Morning, Afternoon, Evening).
 
 ## Conclusion
 
-• SQL can be effectively used to clean, explore, and analyze retail sales data.
-• The analysis highlighted key drivers of sales performance, including top categories, loyal customers, and seasonal trends.
-• Actionable insights such as identifying peak shopping hours, high-value customers, and underperforming categories can guide marketing campaigns and inventory management.
-• With additional tools like Tableau, Power BI, or Python, these findings can be turned into interactive dashboards and predictive models for future sales forecasting.
+- SQL can be effectively used to clean, explore, and analyze retail sales data.
+- The analysis highlighted key drivers of sales performance, including top categories, loyal customers, and seasonal trends.
+- Actionable insights such as identifying peak shopping hours, high-value customers, and underperforming categories can guide marketing campaigns and inventory management.
+- With additional tools like Tableau, Power BI, or Python, these findings can be turned into interactive dashboards and predictive models for future sales forecasting.
 
 ## Tech Stack
 - SQL (PostgreSQL)
@@ -407,13 +411,18 @@ ORDER BY customer_id, category_sales DESC;
 4. Insert sample data
 5. Run queries step by step for analysis
 
-## Author - Bhavesh Vadnere
-IT Engineering Student @ SCOE Pune | Data Enthusiast | SQL & Data Analytics Learner  
+## Author 
+**Bhavesh Vadnere**
+
+IT Engineering Student @ SCOE Pune | Data Enthusiast | SQL & Data Analytics Learner 
+
 Open to Internships & Projects in Data Analytics, SQL, and Business Intelligence
 
 ## Stay connected
-• Email: bhaveshvadnere8888@gmail.com
-• LinkedIn: https://www.linkedin.com/in/bhavesh-vadnere
-• GitHub: https://github.com/BhaveshV23
+- GitHub: https://github.com/BhaveshV23
+
+- LinkedIn: https://www.linkedin.com/in/bhavesh-vadnere
+
+- Email: bhaveshvadnere8888@gmail.com
 
 ## END of project
